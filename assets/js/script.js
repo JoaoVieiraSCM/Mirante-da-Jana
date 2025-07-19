@@ -133,7 +133,7 @@ const translations = {
         "host-lipe-bio": "“Sempre de braços abertos para receber!”",
         "contact-whatsapp": "WhatsApp: (12) 98156-3369",
         "footer-slogan": "Seu refúgio em Ilhabela",
-        "footer-copyright": '© 2025 Mirante da Jana | Desenvolvido por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a>'
+        "footer-copyright": '© 2025 Mirante da Jana | Desenvolvido por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a> e <a href="https://www.linkedin.com/in/joao-vitor-vieira-souto-camelo-monteiro/" target="_blank" class="hover:text-white underline">João Vitor Monteiro</a>'
     },
     en: {
         "page-title": "Jana's Guest",
@@ -268,7 +268,7 @@ const translations = {
         "host-lipe-bio": "“Always with open arms to welcome you!”",
         "contact-whatsapp": "WhatsApp: +55 (12) 98156-3369",
         "footer-slogan": "Your refuge in Ilhabela",
-        "footer-copyright": '© 2025 Mirante da Jana | Desenvolvido por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a>'
+        "footer-copyright": '© 2025 Mirante da Jana | Desenvolvido por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a> e <a href="https://www.linkedin.com/in/joao-vitor-vieira-souto-camelo-monteiro/" target="_blank" class="hover:text-white underline">João Vitor Monteiro</a>'
     },
     es: {
         "page-title": "Huéspedes de la Jana",
@@ -403,7 +403,7 @@ const translations = {
         "host-lipe-bio": "“¡Siempre con los brazos abiertos para recibir!”",
         "contact-whatsapp": "WhatsApp: +55 (12) 98156-3369",
         "footer-slogan": "Su refugio en Ilhabela",
-        "footer-copyright": '© 2025 Mirante da Jana | Desarrollado por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a>'
+        "footer-copyright": '© 2025 Mirante da Jana | Desarrollado por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a> e <a href="https://www.linkedin.com/in/joao-vitor-vieira-souto-camelo-monteiro/" target="_blank" class="hover:text-white underline">João Vitor Monteiro</a>'
     }
 };
 
