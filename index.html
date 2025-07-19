@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="description" content="Guia dos hóspedes do Mirante da Jana, com informações sobre check-in, regras, localização e acomodações." />
+
+  <title>Hospedes da Jana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/imgs/logo-mirante.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3a5a40',
+            secondary: '#f8b400',
+            accent: '#f78536',
+            light: '#f9f7f3',
+            dark: '#2c3e50',
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-light text-dark ">
+  <header class="bg-primary text-white py-4 px-6 flex justify-between md:grid md:grid-cols-3  items-center shadow-lg">
+
+        <div class="flex items-center md:justify-self-start">
+            <svg class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <h1 class="text-xl font-semibold" data-translate="title">Mirante da Jana</h1>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-6 md:justify-self-center">
+            <a href="#checkin" class="hover:text-secondary transition-colors duration-300 whitespace-nowrap" data-translate="nav-checkin">Check-in/out</a>
+            <a href="#regras" class="hover:text-secondary transition-colors duration-300 whitespace-nowrap" data-translate="nav-rules">Regras</a>
+            <a href="#localizacao" class="hover:text-secondary transition-colors duration-300 whitespace-nowrap" data-translate="nav-location">Localização</a>
+            <a href="#acomodacoes" class="hover:text-secondary transition-colors duration-300 whitespace-nowrap" data-translate="nav-accommodations">Acomodações</a>
+            <a href="#tips" class="hover:text-secondary transition-colors duration-300 whitespace-nowrap" data-translate="nav-tips">Dicas</a>
+            <a href="#contato" class="hover:text-secondary transition-colors duration-300 whitespace-nowrap" data-translate="nav-contact">Contato</a>
+        </nav>
+
+        <div class="language-selector group relative inline-block text-left z-50 py-3 -my-3 md:justify-self-end">
+            <button class="flex items-center text-white hover:text-yellow-400 font-semibold transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+                </svg>
+                <span data-translate="language-button">Idioma</span>
+            </button>
+            <div class="absolute right-0 mt-1 w-44 bg-white rounded-md shadow-lg invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                <div class="px-4 py-3 hover:bg-gray-200 flex items-center gap-3 cursor-pointer text-gray-800" onclick="changeLanguage('pt')">
+                    <div class="w-[1.9rem] h-4 flex-shrink-0 flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" fill="none"><rect width="1000" height="700" fill="#009739"/><path d="M500 85L915 350L500 615L85 350L500 85Z" fill="#FEDD00"/><circle cx="500" cy="350" r="175" fill="#002776"/></svg>
+                    </div>
+                    <span data-translate="lang-pt">Português</span>
+                </div>
+                <div class="px-4 py-3 hover:bg-gray-200 flex items-center gap-3 cursor-pointer text-gray-800" onclick="changeLanguage('en')">
+                    <div class="w-[1.9rem] h-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 100"><rect width="190" height="100" fill="#fff" /><g fill="#B22234"><rect width="190" y="0" height="7.69" /><rect width="190" y="15.38" height="7.69" /><rect width="190" y="30.76" height="7.69" /><rect width="190" y="46.14" height="7.69" /><rect width="190" y="61.52" height="7.69" /><rect width="190" y="76.9" height="7.69" /><rect width="190" y="92.28" height="7.69" /></g><rect width="76" height="53.85" fill="#3C3B6E" /></svg></div>
+                    <span data-translate="lang-en">English</span>
+                </div>
+                <div class="px-4 py-3 hover:bg-gray-200 flex items-center gap-3 cursor-pointer text-gray-800" onclick="changeLanguage('es')">
+                    <div class="w-[1.9rem] h-4 flex-shrink-0 flex justify-center items-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2"><rect width="3" height="2" fill="#C60B1E"/><rect width="3" height="1" y="0.5" fill="#FFC400"/></svg></div>
+                    <span data-translate="lang-es">Español</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <main>
+    <section id="hero" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+        <img 
+            src="assets/imgs/background-hero.jpg" 
+            alt="Paisagem da piscina do Mirante da Jana"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+
+        <div class="relative z-10 container mx-auto px-6" data-aos="zoom-in-up">
+            <h1 class="text-5xl lg:text-7xl font-bold mb-4" data-translate="hero-title" >Guia do Hóspede</h1>
+            <p class="text-xl md:text-2xl mb-8" data-translate="hero-subtitle">
+            Estamos caprichando nos detalhes para recebê-lo
+            </p>
+            <a href="#checkin" class="bg-yellow-400 text-primary font-bold py-3 px-8 rounded-full transition-transform hover:scale-105 inline-block" data-translate="hero-button">
+            Clique e veja os detalhes
+            </a>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg class="relative block w-full h-[80px]" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,80 C480,0 960,80 1440,0 L1440,80 L0,80 Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="checkin" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-12" data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary inline-flex items-center" data-translate="checkin-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Check-in e Check-out
+                </h2>
+                <div class="w-32 h-1 bg-secondary mx-auto mt-2"></div>
+            </div>
+
+            <div class="mb-16 bg-light rounded-xl p-8 pl-10 relative shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up">
+                <div class="absolute left-0 top-0 h-full w-2 bg-secondary rounded-l-xl"></div>
+                <!-- <h2 class="text-2xl font-bold text-primary mb-6" data-translate="info-title">Informações importantes</h2> -->
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-center">
+                    <svg class="h-5 w-5 text-secondary mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span data-translate="info-reception">Estaremos presentes no check-in para dar as boas-vindas e apresentar nosso espaço</span>
+                    </li>
+                    <li class="flex items-center">
+                    <svg class="h-5 w-5 text-secondary mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span data-translate="info-arrival">Na véspera da viagem, informe seu horário previsto de chegada</span>
+                    </li>
+                    <!-- <li class="flex items-center">
+                    <svg class="h-5 w-5 text-secondary mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span data-translate="info-late-checkin">Check-in deve ser comunicado com antecedência</span>
+                    </li> -->
+                    <li class="flex items-center">
+                    <svg class="h-5 w-5 text-secondary mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span data-translate="info-keys">No dia do check-out, pedimos que as chaves sejam devolvidas no horário combinado e que nos avise com pelo menos 30 minutos de antecedência antes da saída</span>
+                    </li>
+                    <!-- <li class="flex items-center"><svg class="h-5 w-5 text-secondary mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <span data-translate="info-wifis"><span class="strong">Wi-Fi Casas:</span> chalé 1, 2, 3 ou 4 / Senha: ilhabela265<br><span class="strong">Wi-Fi Chalés:</span> mirantesuites
+ / Senha: ilhabela282</span>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-light p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-right">
+                    <h3 class="text-xl font-semibold mb-4 text-primary" data-translate="checkin-houses">Casas</h3>
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-4 text-gray-700">
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="font-medium">
+                        <span data-translate="checkin-in">Check-in:</span> 15:00
+                        </span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="font-medium">
+                        <span data-translate="checkin-out">Check-out:</span> 11:00
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                <div class="bg-light p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-4 text-primary" data-translate="checkin-chalet1">Chalé 1</h3>
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-4 text-gray-700">
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="font-medium">
+                        <span data-translate="checkin-in">Check-in:</span> 12:00
+                        </span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="font-medium">
+                        <span data-translate="checkin-out">Check-out:</span> 10:00
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                <div class="bg-light p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-aos="fade-left">
+                    <h3 class="text-xl font-semibold mb-4 text-primary" data-translate="checkin-chalet2">Chalé 2</h3>
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-4 text-gray-700">
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="font-medium">
+                        <span data-translate="checkin-in">Check-in:</span> 14:00
+                        </span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-secondary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span class="font-medium">
+                        <span data-translate="checkin-out">Check-out:</span> 12:00
+                        </span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-white">
+        <svg class="w-full h-[60px]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f7f3"></path> <!-- bg-white -->
+        </svg>
+    </div>
+
+    <section id="wifi" class="py-16 bg-light">
+        
+        <div class="container mx-auto px-6">
+            <div data-aos="fade-down">
+            <h2 class="text-3xl font-bold text-primary text-center" data-translate="wifi-title">Internet</h2>
+            <div class="w-32 h-1 bg-secondary mx-auto mt-2 mb-12"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Wi-Fi Chalé/Piscina -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative" data-aos="fade-up-right">
+                <div class="absolute left-0 top-0 h-full w-2 bg-secondary rounded-l-xl"></div>
+                <h3 class="text-xl font-semibold mb-4 text-primary flex items-center">
+                <svg class="h-5 w-5 text-secondary mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path transform="scale(0.0375, 0.046875)" fill="currentColor" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+                </svg>
+                <span data-translate="wifi-chalet-title">Wi-Fi Chalé/Piscina</span>
+                </h3>
+                <ul class="space-y-2">
+                <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span data-translate="wifi-chalet-info">
+                        <span class="hidden sm:inline">
+                            <span class="strong">Rede:</span> mirantesuites | <span class="strong">Senha:</span> ilhabela282
+                        </span>
+
+                        <span class="inline sm:hidden">
+                            <span class="strong">Rede:</span> mirantesuites<br>
+                            <span class="strong">Senha:</span> ilhabela282
+                        </span>
+                    </span>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Wi-Fi Casas -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative" data-aos="fade-up-left">
+                <div class="absolute left-0 top-0 h-full w-2 bg-secondary rounded-l-xl"></div>
+                <h3 class="text-xl font-semibold mb-4 text-primary flex items-center">
+                <svg class="h-5 w-5 text-secondary mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path transform="scale(0.0375, 0.046875)" fill="currentColor" d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
+                </svg>
+                <span data-translate="wifi-house-title">Wi-Fi Casas</span>
+                </h3>
+                <ul class="space-y-2">
+                <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span data-translate="wifi-house-info">
+                        <span class="hidden sm:inline">
+                            <span class="strong">Rede:</span> chalé 1, 2, 3 ou 4 | <span class="strong">Senha:</span> ilhabela265
+                        </span>
+
+                        <span class="inline sm:hidden">
+                            <span class="strong">Rede:</span> chalé 1, 2, 3 ou 4<br>
+                            <span class="strong">Senha:</span> ilhabela265
+                        </span>
+                    </span>
+                </li>
+                </ul>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-white scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f7f3"></path>
+        </svg>
+    </div>
+
+    <section id="regras" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary text-center" data-translate="rules-title">Regras de Boa Convivência e Conservação</h2>
+                <div class="w-32 h-1 bg-secondary mx-auto mt-2 mb-12" ></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+            
+                <div class="bg-light p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1" data-aos="fade-up-right">
+                    <h3 class="text-xl font-semibold mb-4 text-primary flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg><span data-translate="rules-cleaning-title">Limpeza e Conservação</span></h3>
+                    <ul class="space-y-2">
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="rules-cleaning-fee">Não cobramos taxa de limpeza. Ao sair, descarte o lixo na lixeira e deixe a louça lavada</span></li>
+                    <!-- <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="rules-cleaning-dishes">Ao sair, descarte o lixo na lixeira e deixe a louça lavada</span></li> -->
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="rules-attention-charge">A reposição de qualquer item danificado e/ou quebrado será cobrado</span></li>
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="rules-not-allowed-toilet">Não jogue papel no vaso</span></li>
+                    </ul>
+                </div>
+                
+                <div class="bg-light p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-4 text-primary flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg><span data-translate="rules-not-allowed-title">Não é Permitido</span></h3>
+                    <ul class="space-y-2">
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg><span data-translate="rules-not-allowed-visitors">Visitantes fora da reserva</span></li>
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg><span data-translate="rules-not-allowed-smoking">Fumar nas áreas cobertas</span></li>
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg><span data-translate="rules-not-allowed-bbq">Fazer churrasco</span></li>
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg><span data-translate="rules-not-allowed-noise">Aparelho de som (em nenhum ambiente)</span></li>
+                    <!-- <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg><span data-translate="rules-not-allowed-toilet">Jogar papel no vaso</span></li> -->
+                    <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg><span data-translate="rules-not-allowed-pets">Trazer seu pet</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-light p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1" data-aos="fade-up-left">
+                    <h3 class="text-xl font-semibold mb-4 text-primary flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg><span data-translate="rules-attention-title">Atenção</span></h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg><span data-translate="rules-attention-voltage">Tomadas 220V</span></li>
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span data-translate="rules-attention-silence">Horário de silêncio: 22h às 8h</span></li>
+                        <!-- <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0" fill="currentColor">
+                        <path d="M17.25,9V4.5H15.75V9a3.75,3.75,0,0,1-7.5,0V3h4.189L10.72,4.72a.7497.7497,0,0,0,0,1.061L11.811,6.87L10.72,7.961a.75.75,0,0,0,1.061,1.061l2.25-2.25a.7497.7497,0,0,0,0-1.061L12.939,5.061L15.03,2.97a.75.75,0,0,0-.531-1.281H7.5a.75.75,0,0,0-.75.75v6.75A5.254,5.254,0,0,0,10.5,14.4V21H7.5v1.5h9V21H13.5V14.4A5.254,5.254,0,0,0,17.25,9Z"/>
+                        </svg>
+                        <span data-translate="rules-attention-charge">Quaisquer itens danificados e/ou quebrados serão cobrados</span>
+                        </li> -->
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0" fill="currentColor"><g transform="translate(1.5,1.5) scale(0.036)"><path d="M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128l-192 0c-70.7 0-128-57.3-128-128s57.3-128 128-128l192 0zM576 256c0-106-86-192-192-192L192 64C86 64 0 150 0 256S86 448 192 448l192 0c106 0 192-86 192-192zM192 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z" fill="currentColor"/></g></svg><span data-translate="rules-attention-air">Desligar o ar-condicionado ao sair, cobramos taxa adicional de R$100,00 quando constatado
+                        </span></li>
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 text-yellow-500 mr-2 flex-shrink-0" fill="currentColor"><g transform="translate(1.5, 1.5) scale(0.045)"><path d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96L96 320zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3l0 3c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3l0 3c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3l0 3c0 26.5-21.5 48-48 48s-48-21.5-48-48l0-3c0-8.5 2.1-16.9 6.2-24.3z" fill="currentColor"/></g></svg><span data-translate="rules-attention-close">Ao sair feche as portas e janelas, tempestades tropicais são comuns e podem causar danos ao interior</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-light scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#ffffff"></path>
+        </svg>
+    </div>
+
+    <section id="localizacao" class="py-16 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center" data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary" data-translate="location-title">Localização</h2>
+                <div class="w-32 h-1 bg-secondary mx-auto mt-2 mb-12"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <div class="flex flex-col items-center gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md w-full text-left hover:shadow-xl hover:-translate-y-1" data-aos="fade-right">
+                        <p class="text-lg"><strong data-translate="location-old-address-label">Antigo endereço:</strong></p>
+                        <p data-translate="location-old-address">Trav III da Rua Barra Velha, 282/265</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md w-full text-left hover:shadow-xl hover:-translate-y-1" data-aos="fade-left">
+                        <p class="text-lg"><strong data-translate="location-new-address-label">Novo endereço:</strong></p>
+                        <p data-translate="location-new-address">Rua Yraê Pereira Aranha, 282/265, Ilhabela - SP</p>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/B2AxxwdFL77u3g1h8" target="_blank" class="bg-primary hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full transition-all inline-flex items-center mb-6" data-aos="fade-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <span data-translate="location-view-map">Ver no mapa</span>
+                    </a>
+                </div>
+
+                <div class="rounded-lg overflow-hidden shadow-lg h-full min-h-[450px]" data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14598.575585434766!2d-45.403831912841795!3d-23.83125879999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d291a22122ce19%3A0x41b7565520f5187c!2sMirante%20da%20Jana%20Ilhabela!5e0!3m2!1spt-BR!2sbr!4v1751766501114!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-white scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f7f3"></path>
+        </svg>
+    </div>
+
+    <section id="balsa" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary mb-4" data-translate="balsa-titulo">Travessia Ilhabela</h2>
+                <div class="w-32 h-1 bg-secondary mx-auto mb-8"></div>
+            </div>
+            
+            <p class="text-lg mb-10" data-translate="balsa-descricao" data-aos="fade-down" data-aos-delay="100">
+            A travessia São Sebastião ↔ Ilhabela funciona 24h por dia. Pedestres não pagam.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto text-left text-gray-700">
+
+                <!-- Carros -->
+                <div class="row-span-2 p-6 bg-light rounded-xl shadow hover:shadow-md transition duration-300 flex flex-col justify-center gap-4" data-aos="fade-right" data-aos-delay="100">
+    
+                    <!-- Cabeçalho com ícone e título -->
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500" viewBox="0 0 640 512" fill="currentColor">
+                            <path d="M171.3 96L224 96l0 96-112.7 0 30.4-75.9C146.5 104 158.2 96 171.3 96zM272 192l0-96 81.2 0c9.7 0 18.9 4.4 25 12l67.2 84L272 192zm256.2 1L428.2 68c-18.2-22.8-45.8-36-75-36L171.3 32c-39.3 0-74.6 23.9-89.1 60.3L40.6 196.4C16.8 205.8 0 228.9 0 256L0 368c0 17.7 14.3 32 32 32l33.3 0c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80l130.7 0c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80l33.3 0c17.7 0 32-14.3 32-32l0-48c0-65.2-48.8-119-111.8-127zM434.7 368a48 48 0 1 1 90.5 32 48 48 0 1 1 -90.5-32zM160 336a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                        <strong class="text-base font-semibold text-gray-800" data-translate="balsa-carros-label">Carros:</strong>
+                    </div>
+
+                    <!-- Conteúdo com informações -->
+                    <div class="flex flex-col">
+                        <p class="text-sm text-gray-600 mb-2" data-translate="balsa-carros-info">
+                            Os preços para veículos variam de acordo com o dia da travessia:
+                        </p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li data-translate="balsa-carros-dia-util">• R$ 19,00 <span class="text-gray-500">(dias úteis)</span></li>
+                            <li data-translate="balsa-carros-fds">• R$ 28,50 <span class="text-gray-500">(finais de semana e feriados)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pagamento -->
+                <div class="p-6 bg-light rounded-xl shadow hover:shadow-md transition duration-300 flex items-center gap-3" data-aos="fade-left" data-aos-delay="100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="2" y1="10" x2="22" y2="10"/>
+                    </svg>
+                    <div>
+                    <strong data-translate="balsa-pagamento-label">Pagamento:</strong>
+                    <span data-translate="balsa-pagamento-texto">dinheiro ou tag's</span>
+                    </div>
+                </div>
+
+                <!-- Tempo -->
+                <!-- <div class="p-6 bg-light rounded-xl shadow hover:shadow-md transition duration-300 flex items-center gap-3" data-aos="fade-right" data-aos-delay="100"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <div>
+                    <strong data-translate="balsa-tempo-label">Tempo:</strong>
+                    <span data-translate="balsa-tempo-texto">cerca de <strong>20 minutos</strong> + espera</span>
+                    </div>
+                </div> -->
+
+                <!-- Link espera -->
+                <div class="p-6 bg-light rounded-xl shadow hover:shadow-md transition duration-300 flex items-center gap-3" data-aos="fade-left" data-aos-delay="100">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-500" viewBox="0 0 640 512" fill="currentColor">
+                    <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/>
+                    </svg>
+                    <div>
+                    <a href="https://semil.sp.gov.br/travessias/travessias-automoveis/sao-sebastiao-ilhabela/" target="_blank" class="link-animado" data-translate="balsa-link-tempo">
+                        Ver tempo de espera em tempo real
+                    </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-light scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#ffffff"></path>
+        </svg>
+    </div>
+
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center" data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary mb-4"><span data-translate="video-title">Trajeto da balsa até o</span> Mirante da Jana</h2>
+                <div class="w-32 h-1 bg-secondary mx-auto mt-2 mb-12"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div class="flex items-center" data-aos="fade-right">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg text-left">
+                        <!-- <h3 class="text-2xl font-semibold text-primary mb-4" data-translate="video-section-title">Um vislumbre da sua chegada</h3> -->
+                        
+                        <!-- <p class="text-gray-600 mb-4" data-translate="video-section-p">
+                            Para que você se sinta em casa antes mesmo de chegar, preparamos um vídeo mostrando o trajeto final até o nosso refúgio. Veja o percurso exato e a beleza natural que te espera.
+                        </p> -->
+                        
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-secondary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span data-translate="video-li-1">Estamos em um dos pontos mais altos da Ilha, apenas 1,8km da balsa</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-secondary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span data-translate="video-li-2">O acesso de carro é fácil, sem surpresas ou perrengues e apenas a 5 minutos da balsa</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-5 w-5 text-secondary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span data-translate="video-li-3">Para quem viaja de ônibus sugerimos pedir um motorista do aplicativo Fast Go Drive a subida a pé é cansativa</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xs mx-auto" data-aos="zoom-in-up">
+                    <div class="bg-gray-800 border-8 border-gray-800 rounded-[2.5rem] shadow-xl">
+                        <div class="relative rounded-[2rem] overflow-hidden" style="padding-top: 177.77%;">
+                            <video 
+                                class="absolute top-0 left-0 w-full h-full object-cover" 
+                                autoplay 
+                                muted
+                                loop
+                                controls
+                                playsinline 
+                                src="assets/imgs/caminho-mirante-da-jana.mp4" 
+                                type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-white scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f7f3"></path>
+        </svg>
+    </div>
+
+    <section id="acomodacoes" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div data-aos="fade-down">
+            <h2 class="text-3xl font-bold text-primary text-center" data-translate="accommodations-title">Nossas Acomodações</h2>
+            <div class="w-32 h-1 bg-secondary mx-auto mt-2 mb-12"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="bg-light p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1" data-aos="fade-up-right">
+            <h3 class="text-2xl font-semibold mb-6 text-primary" data-translate="accommodations-chalets-title">Nos chalés nós oferecemos</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-1">Banheira de imersão</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-2">Cozinha compacta (Micro-ondas, frigobar, airfryer e utensílios), não tem fogão</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-4">Ar-condicionado</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-4.5">Ventilador de teto</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-5">Smart TV</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-5.5">Internet rápida</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-6">Roupa de cama e banho</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-7">Cafeteira (café, açucar e biscoitinhos)</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-8">Secador de cabelo</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-9">Vaga para carros com câmeras de segurança</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-10">Varanda privativa</span></li>
+                <!-- <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="chalet-feature-11"><span class="strong">Wi-Fi Chalé/Piscina - </span><span class="strong">Rede:</span> mirantesuites | <span class="strong">Senha:</span> ilhabela282</span></li> -->
+                
+            </ul>
+          </div>
+          <div class="bg-light p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1" data-aos="fade-up-left">
+            <h3 class="text-2xl font-semibold mb-6 text-primary" data-translate="accommodations-houses-title">Nas casas nós oferecemos</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-1">Hidromassagem aquecida</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-2">Cozinha completa (cooktop, geladeira, micro-ondas, filtro de água e utensílios)</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-3">Ar-condicionado e ventilador de teto em todos os ambientes</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-4">Smart TV 50"</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-5">Cafeteira elétrica (café, açucar e biscoitinhos)</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-6">Internet rápida</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-7">Roupa de cama e banho</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-8">Secador de cabelo</span></li>
+                <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-9">Vaga para carros com câmeras de segurança</span></li>
+                <!-- <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span data-translate="house-feature-10"><span class="strong">Wi-Fi Casas - </span><span class="strong">Rede:</span>  chalé 1, 2, 3 ou 4  | <span class="strong">Senha:</span> ilhabela265</span></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-light scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#ffffff"></path>
+        </svg>
+    </div>
+
+    <section id="tips" class="py-16 bg-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center" data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary text-center" data-translate="tips-title">Dicas e Sugestões</h2>
+                <div class="w-32 h-1 bg-secondary mx-auto mt-2 mb-12"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="zoom-in">
+                    <h3 class="text-lg font-semibold mb-6 text-primary flex items-center gap-2 whitespace-nowrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary flex-shrink-0" viewBox="-16 -16 480 544" fill="none" stroke="#f8b400" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M416 0C400 0 288 32 288 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128 0-112 0-208c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7L80 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16l0 134.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8L64 16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/>
+                        </svg>
+                        <span data-translate="tips-restaurants-title">Restaurantes</span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://maps.app.goo.gl/novsndDTZt7zGEUq9" target="_blank" class="link-animado" data-translate="restaurant-1">Espaço Piuva</a></li>
+                        <li><a href="https://maps.app.goo.gl/GaWX2u61qsPR9zdf8" target="_blank" class="link-animado" data-translate="restaurant-2">Pimenta de Cheiro</a></li>
+                        <li><a href="https://maps.app.goo.gl/J4RapXkbs69kLhAPA" target="_blank" class="link-animado" data-translate="restaurant-3">Convés</a></li>
+                        <li><a href="https://maps.app.goo.gl/zSUGDAhbpcgfWuWV9" target="_blank" class="link-animado" data-translate="restaurant-4">Cura</a></li>
+                        <li><a href="https://maps.app.goo.gl/Yg54xFCHNtHBAhHN9" target="_blank" class="link-animado" data-translate="restaurant-5">Cheiro Verde</a></li>
+                        <li><a href="https://maps.app.goo.gl/t3FwK2Km9xgYpm1N6" target="_blank" class="link-animado" data-translate="restaurant-6">Manjericão</a></li>
+                        <li><a href="https://maps.app.goo.gl/1TcAZZHzyCchgi9A6" target="_blank"class="link-animado" data-translate="restaurant-7">Ilha do Camarão</a></li>
+                        <li><a href="https://maps.app.goo.gl/z7JSHLrmvAhZStZz5" target="_blank" class="link-animado" data-translate="restaurant-8">Makai</a></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="zoom-in">
+                    <h3 class="text-lg font-semibold mb-6 text-primary flex items-center gap-2 whitespace-nowrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary flex-shrink-0" viewBox="-16 -16 544 544" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M169.7 .9c-22.8-1.6-41.9 14-47.5 34.7L110.4 80c.5 0 1.1 0 1.6 0c176.7 0 320 143.3 320 320c0 .5 0 1.1 0 1.6l44.4-11.8c20.8-5.5 36.3-24.7 34.7-47.5C498.5 159.5 352.5 13.5 169.7 .9zM399.8 410.2c.1-3.4 .2-6.8 .2-10.2c0-159.1-128.9-288-288-288c-3.4 0-6.8 .1-10.2 .2L.5 491.9c-1.5 5.5 .1 11.4 4.1 15.4s9.9 5.6 15.4 4.1L399.8 410.2zM176 208a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm64 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM96 384a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
+                    </svg>
+                        <span data-translate="tips-pizzerias-title">Pizzarias e Espetarias</span>
+                    </h3>
+                    <p class="font-bold text-gray-700" data-translate="tips-subtitle-pizzerias">Pizzarias:</p>
+                    <ul class="space-y-3 mt-2 mb-4">
+                        <li><a href="https://maps.app.goo.gl/etHEMNPP7SKwji3x7" target="_blank" class="link-animado" data-translate="pizzeria-1">Toscanela</a></li>
+                        <li><a href="https://maps.app.goo.gl/cux3M9bFFMFddTrSA" target="_blank" class="link-animado" data-translate="pizzeria-2">Mozzarello</a></li>
+                    </ul>
+                    <p class="font-bold text-gray-700" data-translate="tips-subtitle-espetarias">Espetarias:</p>
+                    <ul class="space-y-3 mt-2">
+                        <li><a href="https://maps.app.goo.gl/8nQysFJtXqUvQVHb7" target="_blank" class="link-animado" data-translate="espetaria-1">Varanda</a></li>
+                        <li><a href="https://maps.app.goo.gl/wyzLREvzDY997v597" target="_blank" class="link-animado" data-translate="espetaria-2">Empório Barra Mix</a></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="zoom-in">
+                    <h3 class="text-lg font-semibold mb-6 text-primary flex items-center gap-2 whitespace-wrap"><!-- Alterei o no-wrap aqui -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-7 text-secondary flex-shrink-0" viewBox="-16 -16 608 544" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M432 240c53 0 96-43 96-96s-43-96-96-96c-35.5 0-66.6 19.3-83.2 48l-52.6 0C316 40.1 369.3 0 432 0c79.5 0 144 64.5 144 144s-64.5 144-144 144c-27.7 0-53.5-7.8-75.5-21.3l35.4-35.4c12.2 5.6 25.8 8.7 40.1 8.7zM1.8 142.8C5.5 133.8 14.3 128 24 128l368 0c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-177 177L232 464l64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-118.1L7 169c-6.9-6.9-8.9-17.2-5.2-26.2z"/>
+                        </svg>
+                        <span data-translate="tips-snacks-title">Lanches e Agência de Passeios</span>
+                    </h3>
+                    <p class="font-bold text-gray-700" data-translate="tips-subtitle-snacks">Lanches:</p>
+                    <ul class="space-y-3 mt-2 mb-4">
+                        <li><a href="https://maps.app.goo.gl/o3fdTbVFMXQeEZja8" target="_blank" class="link-animado" data-translate="snack-1">Rampaso</a></li>
+                        <li><a href="https://maps.app.goo.gl/oEjhZ6wa12vQKEqz8" target="_blank" class="link-animado" data-translate="snack-2">El Pirata</a></li>
+                        <li><a href="https://maps.app.goo.gl/zFe8wAZ1hoiC6QSm9" target="_blank" class="link-animado" data-translate="snack-3">Borrachudo</a></li>
+                    </ul>
+                    <p class="font-bold text-gray-700" data-translate="tips-subtitle-tours">Passeios:</p>
+                    <ul class="space-y-3 mt-2">
+                        <li><a href="https://maps.app.goo.gl/5j41crFGHiww1pXM6" target="_blank" class="link-animado" data-translate="tour-1">Maremar</a></li>
+                        <li><a href="https://maps.app.goo.gl/SMBSWxQhzCZTzaBp8" target="_blank" class="link-animado" data-translate="tour-2">Ilha ECO</a></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md" data-aos="zoom-in">
+                    <h3 class="text-lg font-semibold mb-6 text-primary flex items-center gap-2 whitespace-nowrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5 text-secondary flex-shrink-0" viewBox="-16 -16 480 544" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/>
+                        </svg>
+                        <span data-translate="tips-shopping-title">Compras e Transporte</span>
+                    </h3>
+                    <p class="font-bold text-gray-700" data-translate="tips-subtitle-malls">Mini Shoppings:</p>
+                    <ul class="space-y-3 mt-2 mb-4">
+                        <li><a href="https://maps.app.goo.gl/C3MPcx2fG4GnLfbw7" target="_blank" class="link-animado" data-translate="shopping-1">Mares Ilha Mall</a></li>
+                        <li><a href="https://maps.app.goo.gl/Cz4TStdS2j4773LD8" target="_blank" class="link-animado" data-translate="shopping-2">Ardhentia</a></li>
+                    </ul>
+                    <p class="font-bold text-gray-700" data-translate="driver-uber">Motorista Uber:</p>
+                    <ul class="space-y-3 mt-2 mb-4">
+                        <li><a href="https://wa.me/5512996854840" class="link-animado" data-tel="5512996854840">Fabrício Carvalho<br>(12) 99685-4840</a></li>
+                    </ul>
+                    <p class="font-bold text-gray-700" data-translate="transport-app">Aplicativo de Transporte:</p>
+                    <ul class="space-y-3 mt-2">
+                        <li><a href="https://fastgodrive.com.br/" target="_blank" class="link-animado">Fast Go Drive</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-white scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#f9f7f3"></path>
+        </svg>
+    </div>
+
+   <section id="passeios" class="py-16 bg-white" data-translate="passeios">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-primary mb-4" data-aos="fade-up" data-translate="passeios-title">
+            Passeios em Ilhabela
+            </h2>
+            <div class="w-32 h-1 bg-secondary mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
+            <p class="text-lg text-gray-700 mb-8" data-aos="fade-up" data-aos-delay="200" data-translate="passeios-description">
+            Clique no guia abaixo para baixar sugestões de trilhas, praias e atrações imperdíveis da ilha.
+            </p>
+
+            <a href="assets/docs/Guia de Passeios.pdf" download
+            class="inline-block group transition-all duration-300 custom-hover-trigger"
+            data-aos="zoom-in" data-aos-delay="200">
+
+            <div class="relative overflow-hidden rounded-xl shadow-md border border-gray-200 max-w-[240px] mx-auto group-hover:shadow-xl transform group-hover:scale-105 transition duration-300">
+                <img src="assets/imgs/preview-guia-ilhabela.jpg" alt="Guia de Passeios - Preview"
+                    class="w-full h-auto transition duration-300 md:blur-sm group-hover:blur-0 image-pdf"/>
+            </div>
+
+            <p class="mt-4 text-primary font-semibold text-base hover-target link-animado transition-all duration-300" data-translate="passeios-link-title">
+                Guia de Passeios (PDF)
+            </p>
+            </a>
+        </div>
+    </section>
+
+    <div class="w-full overflow-hidden leading-[0] -mt-1 bg-light scale-x-[-1]" >
+        <svg class="w-full h-[60px] scale-y-[-1]" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C480,0 960,60 1440,0 L1440,60 L0,60 Z" fill="#ffffff"></path>
+        </svg>
+    </div>
+
+    <section id="contato" class="py-16 bg-light">
+        <div class="container mx-auto px-6 text-center">
+            <div data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary" data-translate="contact-title">Contato</h2>
+                <div class="w-32 h-1 bg-secondary mx-auto mt-2 mb-12"></div>
+            </div>
+            
+
+            <div class="contact-carousel mb-12 md:hidden">
+                <div class="px-2">
+                    <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg h-full">
+                        <div class="w-32 h-32 rounded-full overflow-hidden shadow-md mb-4 flex-shrink-0 mx-auto">
+                            <img src="assets/imgs/imagem-jana.jpg" alt="Foto da Jana" class="profile-image">
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold text-primary" data-translate="host-jana-name">Jana</h3>
+                            <p class="text-gray-500" data-translate="host-jana-role">Anfitriã</p>
+                            <p class="text-sm italic text-gray-400 mt-2 h-12 flex items-center justify-center" data-translate="host-jana-bio">“Estou caprichando nos detalhes❤️”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-2">
+                    <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg h-full">
+                        <div class="w-32 h-32 rounded-full overflow-hidden shadow-md mb-4 flex-shrink-0 mx-auto">
+                            <img src="assets/imgs/imagem-enzo.png" alt="Foto do Enzo" class="profile-image">
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold text-primary" data-translate="host-enzo-name">Enzo</h3>
+                            <p class="text-gray-500" data-translate="host-enzo-role">Coanfitrião</p>
+                            <p class="text-sm italic text-gray-400 mt-2 h-12 flex items-center justify-center" data-translate="host-enzo-bio">“Sempre on-line no WhatsApp!”</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-2">
+                    <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg h-full">
+                        <div class="w-32 h-32 rounded-full overflow-hidden shadow-md mb-4 flex-shrink-0 mx-auto">
+                            <img src="assets/imgs/imagem-lipe.jpg" alt="Foto do Lipe" class="profile-image">
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl font-semibold text-primary" data-translate="host-lipe-name">Lipe</h3>
+                            <p class="text-gray-500" data-translate="host-lipe-role">Coanfitrião</p>
+                            <p class="text-sm italic text-gray-400 mt-2 h-12 flex items-center justify-center" data-translate="host-lipe-bio">“Sempre de braços abertos para receber!”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden md:grid md:grid-cols-3 md:gap-8 mb-12">
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg h-full transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-32 h-32 rounded-full overflow-hidden shadow-md mb-4 flex-shrink-0 mx-auto">
+                        <img src="assets/imgs/imagem-jana.jpg" alt="Foto da Jana" class="profile-image">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-primary" data-translate="host-jana-name">Jana</h3>
+                        <p class="text-gray-500" data-translate="host-jana-role">Anfitriã</p>
+                        <p class="text-sm italic text-gray-400 mt-2 h-12 flex items-center justify-center" data-translate="host-jana-bio">“Estou caprichando nos detalhes❤️”</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg h-full transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-32 h-32 rounded-full overflow-hidden shadow-md mb-4 flex-shrink-0 mx-auto">
+                        <img src="assets/imgs/imagem-enzo.png" alt="Foto do Enzo" class="profile-image">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-primary" data-translate="host-enzo-name">Enzo</h3>
+                        <p class="text-gray-500" data-translate="host-enzo-role">Coanfitrião</p>
+                        <p class="text-sm italic text-gray-400 mt-2 h-12 flex items-center justify-center" data-translate="host-enzo-bio">“Sempre on-line no WhatsApp!”</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg h-full transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div class="w-32 h-32 rounded-full overflow-hidden shadow-md mb-4 flex-shrink-0 mx-auto">
+                        <img src="assets/imgs/imagem-lipe.jpg" alt="Foto do Lipe" class="profile-image">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-primary" data-translate="host-lipe-name">Lipe</h3>
+                        <p class="text-gray-500" data-translate="host-lipe-role">Coanfitrião</p>
+                        <p class="text-sm italic text-gray-400 mt-2 h-12 flex items-center justify-center" data-translate="host-lipe-bio">“Sempre de braços abertos para receber!”</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://wa.me/5512981563369" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold rounded-full transition-transform hover:scale-105 inline-flex items-center text-sm md:text-base py-2 px-4 md:py-3 md:px-6" data-aos="zoom-in">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M8.88595 7.16985C9.06891 7.17475 9.27175 7.18465 9.46474 7.61303C9.59271 7.89821 9.80829 8.42321 9.9839 8.85087C10.1206 9.18366 10.233 9.45751 10.2611 9.51356C10.3254 9.64156 10.365 9.78926 10.2809 9.96156C10.271 9.98188 10.2617 10.0013 10.2526 10.02C10.1852 10.16 10.1372 10.2597 10.0237 10.3899C9.97709 10.4435 9.9285 10.5022 9.88008 10.5607C9.79494 10.6636 9.71035 10.7658 9.63785 10.838C9.50924 10.9659 9.37563 11.1039 9.52402 11.3599C9.6725 11.6159 10.1919 12.4579 10.9587 13.1373C11.783 13.8712 12.4998 14.1805 12.8622 14.3368C12.9325 14.3672 12.9895 14.3918 13.0313 14.4126C13.2886 14.5406 13.4419 14.5209 13.5903 14.3486C13.7388 14.1762 14.2334 13.6001 14.4066 13.3441C14.5748 13.0881 14.7479 13.1275 14.9854 13.2161C15.2228 13.3047 16.4892 13.9251 16.7464 14.0531C16.7972 14.0784 16.8448 14.1012 16.8889 14.1224C17.0678 14.2082 17.1895 14.2665 17.2411 14.3535C17.3054 14.4618 17.3054 14.9739 17.0927 15.5746C16.8751 16.1752 15.8263 16.7513 15.3514 16.7956C15.3064 16.7999 15.2617 16.8053 15.2156 16.8108C14.7804 16.8635 14.228 16.9303 12.2596 16.1555C9.83424 15.2018 8.23322 12.8354 7.90953 12.357C7.88398 12.3192 7.86638 12.2932 7.85698 12.2806L7.8515 12.2733C7.70423 12.0762 6.80328 10.8707 6.80328 9.62685C6.80328 8.43682 7.38951 7.81726 7.65689 7.53467C7.67384 7.51676 7.6895 7.50021 7.70366 7.48494C7.94107 7.22895 8.21814 7.16495 8.39125 7.16495C8.56445 7.16495 8.73756 7.16495 8.88595 7.16985Z"/><path fill-rule="evenodd" d="M2.18418 21.3314C2.10236 21.6284 2.37285 21.9025 2.6709 21.8247L7.27824 20.6213C8.7326 21.409 10.37 21.8275 12.0371 21.8275H12.0421C17.5281 21.8275 22 17.3815 22 11.9163C22 9.26735 20.966 6.77594 19.0863 4.90491C17.2065 3.03397 14.7084 2 12.042 2C6.55607 2 2.08411 6.44605 2.08411 11.9114C2.08348 13.65 2.5424 15.3582 3.41479 16.8645L2.18418 21.3314ZM4.86092 17.2629C4.96774 16.8752 4.91437 16.4608 4.71281 16.1127C3.97266 14.8348 3.58358 13.3855 3.58411 11.9114C3.58411 7.28158 7.37738 3.5 12.042 3.5C14.3119 3.5 16.4296 4.37698 18.0281 5.96805C19.6248 7.55737 20.5 9.66611 20.5 11.9163C20.5 16.5459 16.7068 20.3275 12.0421 20.3275H12.0371C10.6206 20.3275 9.22863 19.9718 7.99266 19.3023C7.65814 19.1211 7.26726 19.0738 6.89916 19.17L4.13676 19.8915L4.86092 17.2629Z"/></svg>
+                <span data-translate="contact-whatsapp">WhatsApp: (12) 98156-3369</span>
+            </a>
+        </div>
+    </section>
+
+  </main>
+  
+  <footer class="bg-primary text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+          <div class="flex justify-center items-center mb-4">
+              <svg class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+              <h2 class="text-2xl font-bold">Mirante da Jana</h2>
+          </div>
+          <p class="mb-6" data-translate="footer-slogan">Seu refúgio em Ilhabela</p>
+          <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.facebook.com/share/1CLxKPaRne/" target="_blank" class="hover:text-secondary transition-colors duration-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/mirantedajanailhabela/" target="_blank" class="hover:text-secondary transition-colors duration-300">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C8.333.014 7.925 0 4.667 0zM12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5512981563369" target="_blank" class="hover:text-secondary transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 448 512">
+                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                    </svg>
+                </a>
+            </div>
+          <p class="text-sm text-gray-400" data-translate="footer-copyright">© 2025 Mirante da Jana | Desenvolvido por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a></p>
+      </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
