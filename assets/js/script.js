@@ -1,6 +1,6 @@
 const translations = {
     pt: {
-        "page-title": "Hóspedes da Jana",
+        "page-title": "mirantedajanailhabela",
         "nav-checkin": "Check-in/out",
         "nav-accommodations": "Acomodações",
         "nav-rules": "Regras",
@@ -136,7 +136,7 @@ const translations = {
         "footer-copyright": '© 2025 Mirante da Jana | Desenvolvido por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a> e <a href="https://www.linkedin.com/in/joao-vitor-vieira-souto-camelo-monteiro/" target="_blank" class="hover:text-white underline">João Vitor Monteiro</a>'
     },
     en: {
-        "page-title": "Jana's Guest",
+        "page-title": "mirantedajanailhabela",
         "nav-checkin": "Check-in/out",
         "nav-accommodations": "Accommodations",
         "nav-rules": "Rules",
@@ -271,7 +271,7 @@ const translations = {
         "footer-copyright": '© 2025 Mirante da Jana | Desenvolvido por <a href="https://www.linkedin.com/in/gabrielazapparoli/" target="_blank" class="hover:text-white underline">Gabriela Zapparoli de Carvalho</a> e <a href="https://www.linkedin.com/in/joao-vitor-vieira-souto-camelo-monteiro/" target="_blank" class="hover:text-white underline">João Vitor Monteiro</a>'
     },
     es: {
-        "page-title": "Huéspedes de la Jana",
+        "page-title": "mirantedajanailhabela",
         "nav-checkin": "Check-in/out",
         "nav-accommodations": "Alojamientos",
         "nav-rules": "Reglas",
